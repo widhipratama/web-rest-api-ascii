@@ -1,4 +1,6 @@
 <?php
+// Source Code by : I Gede Widhi Pratama
+// email : widhipratama52@gmail.com
 use Restserver\Libraries\REST_Controller;
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -9,12 +11,12 @@ class Webserver extends REST_Controller
 {
     public function index_get($val = null)
     {
-        $val = trim($this->get('value'));
-        
-        $ascii = explode(" ", $val);
+        $val = str_replace(' ', '', $this->get('value'));
 
-        for ($i=0; $i < count($ascii); $i++) { 
-            $hasil[$i]  = chr($ascii[$i]);
+        $awal = 0;
+        for ($i=0; $i < (strlen($val)/3); $i++) { 
+            $hasil[$i]  = chr(substr($val, $awal, 3));
+            $awal = $awal + 3;
         }
 
         $output = implode($hasil);

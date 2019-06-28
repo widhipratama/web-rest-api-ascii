@@ -1,5 +1,5 @@
  RewriteEngine on 
- RewriteBase /webrestserver/ 
+ RewriteBase /web-rest-api-ascii/ 
  RewriteCond $1 !^(index.php|resources|robots.txt) 
  RewriteCond %{REQUEST_FILENAME} !-f 
  RewriteCond %{REQUEST_FILENAME} !-d 

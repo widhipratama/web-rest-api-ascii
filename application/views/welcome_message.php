@@ -66,29 +66,37 @@
         border: 1px solid #D0D0D0;
         box-shadow: 0 0 8px #D0D0D0;
     }
+    #codeasci {
+        padding: 10px;
+    }
     </style>
 </head>
 <body>
 
-<div id="container">
-    <h1>Welcome to CodeIgniter!</h1>
+    <div id="container">
+        <h1>Welcome to CodeIgniter Web Client!</h1>
 
-    <div id="body">
+        <div id="body">
+            <form action="" method="get">
+                <input type="text" id="codeasci" name="codeascii" size="60" placeholder="Input Kode ASCII" value="<?php echo $this->input->get('codeascii') ?>">
+                <input type="submit" value="Cek!">
+            </form>
 
-        <h2><a href="#">REST Server Tests</a></h2>
+            <p id="ptext"><b>Output : </b><?php echo ($plaintext ? $plaintext->data : '') ?></p>
 
-        <p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+            <!-- <h2><a href="#">REST Server Tests</a></h2>
 
-        <p>If you would like to edit this page you'll find it located at:</p>
-        <code>application/views/welcome_message.php</code>
+            <p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
 
-        <p>The corresponding controller for this page is found at:</p>
-        <code>application/controllers/Welcome.php</code>
+            <p>If you would like to edit this page you'll find it located at:</p>
+            <code>application/views/welcome_message.php</code>
 
+            <p>The corresponding controller for this page is found at:</p>
+            <code>application/controllers/Welcome.php</code> -->
+
+        </div>
+
+        <p class="footer">&nbsp;</p>
     </div>
-
-    <p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>'.CI_VERSION.'</strong>' : '' ?></p>
-</div>
-
 </body>
 </html>
